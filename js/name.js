@@ -18,9 +18,9 @@ function addToPlayer(element) {
   if (playerArray.length >= 5) {
     alert('You can not select more than 5');
     return;
-   
   }
   else {
+    disableBtn(element)
     playerArray.push(PlayerName)
   }
   document.getElementById('total-added-player').value = playerArray.length;
@@ -30,30 +30,7 @@ function addToPlayer(element) {
 // function of disable button after click :
 
 function disableBtn(inputBtn) {
-  document.getElementById(inputBtn).disabled = true;
-  document.getElementById(inputBtn).innerText = 'Already Selected';
-  document.getElementById(inputBtn).style.backgroundColor = 'gray';
-};
-document.getElementById('first-btn').addEventListener('click', function () {
-  disableBtn('first-btn')
-  
-});
-document.getElementById('second-btn').addEventListener('click', function () {
-  disableBtn('second-btn');
-   
-});
-document.getElementById('third-btn').addEventListener('click', function () {
-  disableBtn('third-btn')
-   
-});
-document.getElementById('fourth-btn').addEventListener('click', function () {
-  disableBtn('fourth-btn')
-   
-});
-document.getElementById('fifth-btn').addEventListener('click', function () {
-  disableBtn('fifth-btn')
-    
-});
-document.getElementById('six-btn').addEventListener('click', function () {
-  disableBtn('six-btn') 
-});
+  inputBtn.disabled = true;
+  inputBtn.innerText = 'Already Selected';
+  inputBtn.style.backgroundColor = 'gray';
+}
