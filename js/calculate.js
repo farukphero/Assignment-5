@@ -7,7 +7,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
   const totalAddedPlayer = document.getElementById('total-added-player');
   const totalAddedPlayerValueString = totalAddedPlayer.value;
   const totalAddedPlayerValue = parseInt(totalAddedPlayerValueString);
-  totalAddedPlayer.value = '';
+
   //  calculate players total cost 
   const playerExpenses = totalAddedPlayerValue * perPlayerInputAmountValue;
   
