@@ -9,13 +9,20 @@ function displayPlayerName(updatePlayerName) {
     li.innerHTML = `
     <ol> ${name} </ol>
     `;
-    createList.appendChild(li)
+    createList.appendChild(li);
   }
   
 }
 function addToPlayer(element) {
   const PlayerName = element.parentNode.children[1].innerText;
-  playerArray.push(PlayerName)
+  if (playerArray.length >= 5) {
+    alert('You can not select more than 5');
+    return;
+   
+  }
+  else {
+    playerArray.push(PlayerName)
+  }
   document.getElementById('total-added-player').value = playerArray.length;
   displayPlayerName(playerArray)
 };
@@ -26,7 +33,7 @@ function disableBtn(inputBtn) {
   document.getElementById(inputBtn).disabled = true;
   document.getElementById(inputBtn).innerText = 'Already Selected';
   document.getElementById(inputBtn).style.backgroundColor = 'gray';
-}
+};
 document.getElementById('first-btn').addEventListener('click', function () {
   disableBtn('first-btn')
   
@@ -48,7 +55,5 @@ document.getElementById('fifth-btn').addEventListener('click', function () {
     
 });
 document.getElementById('six-btn').addEventListener('click', function () {
-  disableBtn('six-btn')
-  
-   
+  disableBtn('six-btn') 
 });
