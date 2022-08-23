@@ -28,39 +28,38 @@
             <img class="w-full h-3/5" src="images/player-1.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Lionel Messi</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white h-5/6">
             <img class="w-full h-3/5" src="images/player-2.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Diego Maradona</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white h-5/6">
-            <img class="w-full h-3/5" src="images/player-3.jpg" alt="">
-            <h1 class="text-2xl font-medium text-center pt-8">Sergio Agüero</h1>
-            <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
-          </div>
-          <div class="shadow shadow-white">
             <img class="w-full h-3/5" src="images/player-4.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Javier Mascherano</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white">
             <img class="w-full h-3/5" src="images/player-5.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Javier Zanetti</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white">
             <img class="w-full h-3/5" src="images/player-6.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Carlos Tevez</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
-           
+          <div class="shadow shadow-white">
+            <img class="w-full h-3/5" src="images/player-9.jpg" alt="">
+            <h1 class="text-2xl font-medium text-center pt-8">Emiliano Martínez</h1>
+            <p class="text-center p-4">36 Goals 120 Assist</p>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+          </div>
         </div>
       </div>
     <div class="ml-12">
@@ -68,14 +67,10 @@
         <h1 class="text-3xl font-medium text-center text-orange-700 p-3">Selected - V</h1>
         <hr class="w-9/12 m-auto">
         
-        <ol class="list-decimal bg-black-200 h-72 w-72 pt-5">
-          <li class="p-3"></li>
-          <li class="p-3"></li>
-          <li class="p-3"></li>
-          <li class="p-3"></li>
-          <li class="p-3"> </li>
+        <ol id="name-list" class="list-decimal text-white bg-black-200 h-72 w-72 pt-5 pl-8">
+           
         </ol>
-        <input class="bg-gray-100 p-3 text-red-400 w-full bg-gray-800" type="text" name="" id="" placeholder="Total Number">
+        <input class="text-white bg-gray-100 p-3 w-full bg-gray-800" type="text" name="" id="total-added-player" placeholder="Total Number">
       </div>
       <div class="shadow shadow-white mt-12 bg-gray-900">
         <h1 class="text-3xl font-medium text-center text-orange-700 p-3">Budget</h1>
@@ -96,6 +91,8 @@
     <hr class="mt-24">
     <p class="text-center m-14">Copyright @ 2022 All Rights Reserved.</p>
   </footer>
+  <!-- add javascript  -->
+  <script src="js/amount.js"></script>
 </body>
 
 </html>
