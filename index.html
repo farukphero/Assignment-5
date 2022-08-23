@@ -1,91 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Big Five Teams in Argentina</title>
+  <title>The Big Five in Argentina</title>
   <!-- tailwind css link  -->
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body class="bg-black text-white">
-  <header class="  h-4/6">
-    <h1 class="text-8xl font-medium text-center mt-36 text-orange-600">The Big Five Teams in Argentina Soccer</h1>
+  <!-- header start  -->
+  <header class="h-4/6">
+    <h1 class="text-8xl font-medium text-center mt-36 text-orange-600">The Big Five in Argentina </h1>
     <p class="text-2xl text-center w-8/12  mx-auto mt-12">'The Big Five' are Argentina's most popular football teams.
       All these teams — Boca, River, Independiente,
       Racing and San Lorenzo are based in Buenos Aires, but have fans around the country. Boca Juniors and River Plate
       are the
       two most popular teams.</p>
   </header>
+  <!-- main part  -->
   <main>
-    <section class="flex w-10/12 m-auto mt-16">
+    <section class="flex w-10/12 m-auto mt-24">
       <div class="w-9/12">
+        <!-- grid picture part  -->
         <div class="grid grid-cols-3 gap-4">
           <div class="shadow shadow-white h-5/6">
             <img class="w-full h-3/5" src="images/player-1.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Lionel Messi</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button onclick="addToPlayer(this)" id="first-btn" type="button" class="input bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white h-5/6">
             <img class="w-full h-3/5" src="images/player-2.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Diego Maradona</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button onclick="addToPlayer(this)" id="second-btn" type="button" class="input bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white h-5/6">
-            <img class="w-full h-3/5" src="images/player-4.jpg" alt="">
+            <img class="w-full h-3/5" src="images/player-3.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Javier Mascherano</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button onclick="addToPlayer(this)" id="third-btn" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+          </div>
+          <div class="shadow shadow-white">
+            <img class="w-full h-3/5" src="images/player-4.jpg" alt="">
+            <h1 class="text-2xl font-medium text-center pt-8">Javier Zanetti</h1>
+            <p class="text-center p-4">36 Goals 120 Assist</p>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white">
             <img class="w-full h-3/5" src="images/player-5.jpg" alt="">
-            <h1 class="text-2xl font-medium text-center pt-8">Javier Zanetti</h1>
+            <h1 class="text-2xl font-medium text-center pt-8">Carlos Tevez</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button onclick="addToPlayer(this)" id="fourth-btn" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
           <div class="shadow shadow-white">
             <img class="w-full h-3/5" src="images/player-6.jpg" alt="">
-            <h1 class="text-2xl font-medium text-center pt-8">Carlos Tevez</h1>
-            <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button onclick="addToPlayer(this)" id="fifth-btn" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
-          </div>
-          <div class="shadow shadow-white">
-            <img class="w-full h-3/5" src="images/player-9.jpg" alt="">
             <h1 class="text-2xl font-medium text-center pt-8">Emiliano Martínez</h1>
             <p class="text-center p-4">36 Goals 120 Assist</p>
-            <button onclick="addToPlayer(this)" id="six-btn" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
+            <button onclick="addToPlayer(this)" type="button" class="bg-blue-600 w-9/12 py-2 mx-8">SELECT</button>
           </div>
         </div>
       </div>
+
+      <!-- calculate part  -->
     <div class="ml-12">
       <div class="shadow shadow-white bg-gray-900">
-        <h1 class="text-3xl font-medium text-center text-orange-700 p-3">Selected - V</h1>
+        <h1 class="text-3xl font-medium text-center text-orange-700 p-3">Select Player</h1>
         <hr class="w-9/12 m-auto">
-        
         <ol id="name-list" class="list-decimal text-white bg-black-200 h-72 w-72 pt-5 pl-8">
         </ol>
-        <input class="hidden text-white bg-gray-100 p-3 w-full bg-gray-800" type="text" name="" id="total-added-player" placeholder="Total Number">
+        <input class="hidden text-white bg-gray-100 p-3 w-full bg-gray-800" type="text" name="" id="total-added-player">
       </div>
       <div class="shadow shadow-white mt-12 bg-gray-900">
         <h1 class="text-3xl font-medium text-center text-orange-700 p-3">Budget</h1>
-         <p class="ml-2">Per player: <input id="input-amount" class="p-2 rounded bg-gray-800" type="text"></p>
-        <button id="calculate-btn" type="button" class="bg-blue-600  w-9/12 py-2 mx-8 mt-5">Calculate</button>
-       <h1 class="ml-2 py-4">Player Expenses : $<span id="total-expenses"></span></h1>
-      <p class="ml-2 mb-3">Manager: <input id="manager-expenses" class="p-2 rounded bg-gray-800" type="text"></p>
-      <p class="ml-2">Coach: <input id="coach-expenses" class="p-2 rounded bg-gray-800" type="text"></p>
-      <button id="total-calculate-btn" type="button" class="bg-blue-600  w-9/12 py-2 mx-8 mt-5">Calculate Total</button>
-      <h1 class="ml-2 py-5 text-white">Total Expenses : $<span id="final-expenses"></span></h1>
+        <p class="ml-2">Per player: <input id="input-amount" class="p-2 rounded  bg-gray-800" type="text"></p>
+        <button id="calculate-btn" type="button" class="bg-blue-600  w-9/12 py-2  mx-8 mt-5">Calculate</button>
+        <h1 class="ml-2 py-4">Player Expenses : $<span id="total-expenses" class="text-xl font-medium text-orange-700"></span></h1>
+        <p class="ml-2 mb-3">Manager: <input id="manager-expenses" class="p-2 rounded bg-gray-800" type="text"></p>
+        <p class="ml-2">Coach Ex: <input id="coach-expenses" class="p-2 rounded bg-gray-800" type="text"></p>
+        <button id="total-calculate-btn" type="button" class="bg-blue-600  w-9/12 py-2 mx-8 mt-5">Calculate Total</button>
+        <h1 class="ml-2 py-5 text-white">Total Expenses : $<span id="final-expenses" class="text-xl font-medium text-orange-700"></span></h1>
       </div>
     </div>
-
     </section>
-    
   </main>
+
+  <!-- footer part  -->
   <footer>
     <hr class="mt-24">
     <p class="text-center m-14">Copyright @ 2022 All Rights Reserved.</p>

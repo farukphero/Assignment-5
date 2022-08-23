@@ -1,6 +1,5 @@
 const playerArray = [];
 function displayPlayerName(updatePlayerName) {
-  console.log(updatePlayerName);
   const createList = document.getElementById('name-list')
   createList.innerHTML = '';
   for (let i = 0; i < updatePlayerName.length; i++){
@@ -20,11 +19,11 @@ function addToPlayer(element) {
     return;
   }
   else {
-    disableBtn(element)
-    playerArray.push(PlayerName)
+    disableBtn(element);
+    playerArray.push(PlayerName);
   }
   document.getElementById('total-added-player').value = playerArray.length;
-  displayPlayerName(playerArray)
+  displayPlayerName(playerArray);
 };
 
 // function of disable button after click :

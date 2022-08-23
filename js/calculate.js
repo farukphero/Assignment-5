@@ -29,6 +29,7 @@ document.getElementById('total-calculate-btn').addEventListener('click', functio
   const managerExpensesValueString = managerExpenses.value;
   const managerExpensesValue = parseInt(managerExpensesValueString);
   managerExpenses.value = '';
+
   const coachExpenses = document.getElementById('coach-expenses');
   const coachExpensesValueString = coachExpenses.value;
   const coachExpensesValue = parseInt(coachExpensesValueString);
@@ -38,8 +39,8 @@ document.getElementById('total-calculate-btn').addEventListener('click', functio
 
   const finalExpenses = document.getElementById('final-expenses');
   const finalExpensesValueString = finalExpenses.innerText;
-  const finalExpensesValue = parseInt(finalExpensesValueString)
+  const finalExpensesValue = parseInt(finalExpensesValueString);
   finalExpenses.innerText = toatalExpenses;
   
 
-})
+});
